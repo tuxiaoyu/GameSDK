@@ -1,0 +1,6 @@
+framework module newGameSDK {
+  umbrella header "newGameSDK.h"
+
+  export *
+  module * { export * }
+}
