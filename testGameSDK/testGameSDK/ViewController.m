@@ -21,10 +21,17 @@
     
     self.view.backgroundColor = [UIColor grayColor];
     
+
+
+
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 200, 50 )];
+    
     [btn  setTitle:@"登录" forState:UIControlStateNormal];
+    
     btn.backgroundColor = [UIColor cyanColor];
+    
     [btn addTarget:self action:@selector(loginAction:) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.view addSubview:btn];
     
     
@@ -37,9 +44,14 @@
 
 
 
+
+
+
 -(void)loginAction:(UIButton *)sender{
     
     [[TXYGameManager shareManager]loginViewShowAndBlock:^(NSString *uid, NSString *token) {
+       
+        
         
     }];
     
@@ -53,6 +65,7 @@
 
 
 -(void)viewWillLayoutSubviews{
+   
     
     if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) {
         
